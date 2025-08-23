@@ -26,7 +26,7 @@ function deriveKeypairFromSeed(seed: Buffer, derivationPath: string): Keypair {
     console.log('Derivation path:', derivationPath);
     const derivedSeed = derivePath(derivationPath, seed.toString('hex')).key;
     console.log('Derived seed:', derivedSeed);
-    const keypair = nacl.sign.keyPair.fromSeed(derivedSeed);
+    const keypair = nacl.sign.keyPair.fromSeed(new Uint8Array(derivedSeed));
     return Keypair.fromSecretKey(new Uint8Array([...keypair.secretKey]));
 }
 

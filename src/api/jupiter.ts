@@ -94,7 +94,7 @@ export class JupiterClient {
     async executeSwap(swapTransaction: any): Promise<boolean> {
         try {
             const swapTransactionBuf = Buffer.from(swapTransaction, 'base64');
-            let transaction = VersionedTransaction.deserialize(swapTransactionBuf);
+            let transaction = VersionedTransaction.deserialize(new Uint8Array(swapTransactionBuf));
             transaction.sign([this.userKeypair]);
 
             const connection = this.getConnection();
