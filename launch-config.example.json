@@ -1,0 +1,13 @@
+{
+  "name": "Solana Meme Coin",
+  "symbol": "SMEME",
+  "description": "The ultimate Solana meme coin powered by AI market making",
+  "imageUrl": "https://img.freepik.com/premium-vector/cute-shiba-inu-dog-astronaut-floating-space_665280-747.jpg",
+  "twitter": "https://twitter.com/solanamemecoin",
+  "telegram": "https://t.me/solanamemecoin",
+  "website": "https://solanamemecoin.xyz",
+  "initialBuyAmountSol": 0.5,
+  "feeShareTwitter": "elonmusk",
+  "creatorFeeBps": 1000,
+  "feeShareBps": 9000
+}

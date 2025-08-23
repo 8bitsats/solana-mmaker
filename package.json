@@ -5,7 +5,15 @@
   "scripts": {
     "start": "node dist/main.js",
     "dev": "ts-node src/main.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "bot": "ts-node src/main-enhanced.ts",
+    "launch": "ts-node src/main-enhanced.ts launch",
+    "launch:interactive": "ts-node src/main-enhanced.ts launch -i",
+    "launch:config": "ts-node src/main-enhanced.ts launch -c",
+    "info": "ts-node src/main-enhanced.ts info",
+    "claim": "ts-node src/main-enhanced.ts claim",
+    "monitor": "ts-node src/main-enhanced.ts monitor",
+    "mm": "ts-node src/main-enhanced.ts mm"
   },
   "keywords": [
     "solana",
@@ -15,17 +23,22 @@
   "author": "gianlucamazza",
   "license": "ISC",
   "dependencies": {
+    "@bagsfm/bags-sdk": "^1.0.3",
     "@jup-ag/api": "^6.0.11",
     "@jup-ag/core": "^4.0.0-beta.21",
     "@project-serum/anchor": "^0.26.0",
     "@solana/spl-token-registry": "^0.2.4574",
     "@solana/web3.js": "^1.90.0",
     "@types/bip39": "^2.4.2",
+    "@types/node": "^24.3.0",
+    "axios": "^1.11.0",
     "bip39": "^3.1.0",
     "bs58": "^5.0.0",
+    "commander": "^14.0.0",
     "cross-fetch": "^4.0.0",
     "dotenv": "^16.4.4",
     "ed25519-hd-key": "^1.3.0",
+    "form-data": "^4.0.4",
     "jsbi": "^4.3.0"
   }
 }
