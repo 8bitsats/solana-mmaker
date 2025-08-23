@@ -151,7 +151,6 @@ export class TokenLauncher {
         creators.forEach(creator => {
             const role = creator.isCreator ? 'Creator' : 'Fee Share';
             console.log(`  ${role}: ${creator.username || creator.twitterUsername || 'Unknown'}`);
-            console.log(`    Wallet: ${creator.wallet}`);
             console.log(`    Royalty: ${creator.royaltyBps / 100}%`);
         });
 
