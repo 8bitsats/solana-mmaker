@@ -149,8 +149,8 @@ export class BagsProtocol {
             const response = await fetch(params.imageUrl);
             imageBlob = await response.blob();
         } else if (params.imageFile) {
-            // Use provided buffer
-            imageBlob = new Blob([params.imageFile], { type: 'image/png' });
+            // Use provided buffer - convert to Uint8Array for Blob compatibility
+            imageBlob = new Blob([new Uint8Array(params.imageFile)], { type: 'image/png' });
         } else {
             // Use default image
             const defaultImage = 'https://img.freepik.com/premium-vector/white-abstract-vactor-background-design_665257-153.jpg';
